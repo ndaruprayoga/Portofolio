@@ -1,0 +1,150 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif
+}
+body
+{
+    color: aliceblue;
+}
+.header
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background-color: #052659;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo
+{
+    position: relative;
+    margin-left: -30px;
+    font-size: 25px;
+    color: #54ACBF;
+    text-decoration: none;
+    font-weight: 1000; 
+    cursor: default;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+.navbar {
+    display: none;
+    flex-direction: column;
+    background-color: transparent;
+    padding: 10px;
+    list-style: none;
+}
+.navbar a
+{
+    display: inline-block;
+    font-size: 25px;
+    color: #c1e8ff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+    opacity: 0;
+    animation: slideTop 2s ease forwards;
+}
+.navbar a:hover
+{
+    color: #7da0c4;
+}
+
+.skill-section {
+    display: flex;
+    justify-content: center; /* Tengah horizontal */
+    align-items: center;     /* Tengah vertikal */
+    height: 100vh;           /* Biar pas di tengah layar penuh */
+    text-align: left;
+    width: 100%;
+    background-color: #5483b3;
+    background-size: cover;
+    background-position: center;
+    padding: 40px 10%;
+}
+
+.skill-content {
+    color: white;
+    animation: fadeIn 3s ease forwards;
+}
+
+.skill-content h2 {
+    border-bottom: 3px solid #54ACBF;
+    color: #c1e8ff;
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    font-size: 50px;
+}
+
+.list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 40px;
+}
+
+.list li {
+    margin: 10px 0;
+    position: relative;
+    padding-left: 25px;
+}
+
+.list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 12px;
+    height: 12px;
+    background: white;
+    border-radius: 50%;
+}
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+@keyframes slideTop {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+@media screen and (min-width: 769px) {
+    .navbar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .menu-button {
+        display: none;
+    }}
+    @keyframes fadeIn {
+        0% {
+            transform: translateX(-100px);
+            opacity: 0;
+        }
+        100% {
+            transform: translateX(0px);
+            opacity: 1;
+        }}
