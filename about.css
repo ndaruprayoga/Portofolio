@@ -79,7 +79,9 @@ body
     justify-content: space-between;
 }
 .pengalaman {
-   width: 50%;      /* biar sejajar dari atas */
+    width: 50%;
+    opacity: 0; /* default: tidak terlihat */
+    animation: fadeInLeft 0.8s ease forwards;  /* biar sejajar dari atas */
 }
 
 /* opsional: pastikan pendidikan tetap di kiri */
@@ -120,9 +122,8 @@ body
     padding-left: 20px;
     opacity: 0; /* default: tidak terlihat */
     animation: fadeInLeft 0.8s ease forwards;
-      }
-  
-  .school::before {
+    }
+.school::before {
     content: '';
     position: absolute;
     left: -13px;
@@ -132,8 +133,8 @@ body
     background-color: white;
     border-radius: 50%;
     border: 3px solid #c5ebfd;
-  }
-  
+}
+
   /* Judul sekolah */
   .school h4 {
     font-size: 25px;
